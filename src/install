@@ -1,0 +1,58 @@
+#! /bin/bash
+
+echo "setting up...";
+echo "Creating TestMate folder at home....";
+sleep 2
+echo ".";
+sleep 2
+echo ".";
+sleep 2
+mkdir ~/TestMate;
+echo "Copying important files from ./src to /home/user/TestMate/"
+cp src/{cf.sh,comp.sh,init.py,template.cpp,template.java,batchoutput.sh} ~/TestMate/;
+if [ $? -ne 0 ]
+then
+    echo "Aborting : error";
+    exit;
+fi
+echo "."
+echo "copied."
+
+echo "Creating command 'cf' for quick access....";
+sleep 2
+echo ".";
+sleep 2
+echo ".";
+sleep 2
+if grep -q "alias cf='cd ~/TestMate/; ./cf.sh;';" ~/.bash_aliases
+then
+    echo "alias already present"
+else
+    printf "\nalias cf='cd ~/TestMate/; ./cf.sh';" >> ~/.bash_aliases
+fi
+if [ $? -ne 0 ]
+then
+    echo "Aborting : error";
+    exit;
+fi
+echo "aliases added...";
+
+
+echo "Changing permissions of directories...."
+sleep 2
+chmod -R 777 ~/TestMate/
+if [ $? -ne 0 ]
+then
+    echo "Aborting : error";
+    exit;
+fi
+echo "permissions added."
+sleep 2
+
+echo ".";
+sleep 2
+echo ".";
+sleep 2
+echo ".";
+
+echo "Open a new terminal and try the command 'cf'";
