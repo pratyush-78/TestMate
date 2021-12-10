@@ -1,0 +1,100 @@
+{
+  "name": "tm-vscode",
+	"displayName": "tm-vscode",
+	"description": "plugin for codeforces",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.63.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+        "*"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+			"command": "tm-vscode.helloWorld",
+			"title": "Hello World",
+			"category": "buttons",
+			"icon": "$(debug-step-back)"
+			},
+			{
+				"command": "tm-vscode.TRYTHIS",
+				"title": "TESTMATE",
+				"category": "buttons"
+			},
+			{
+				"command": "tm-vscode.compile",
+				"title": "compile",
+				"category": "buttons",
+				"icon":"$(rocket)"
+			},
+			{
+				"command": "tm-vscode.output",
+				"title": "output",
+				"category": "buttons",
+				"icon":"$(output)"
+			},
+			{
+				"command": "tm-vscode.submit",
+				"title": "submit",
+				"category": "buttons",
+				"icon":"$(arrow-up)"
+			},
+			{
+				"command": "tm-vscode.outputall",
+				"title": "outputall",
+				"category": "buttons",
+				"icon": "$(close-all)"
+			}
+		],
+		"menus": {
+			"editor/title": [
+				{
+					"command": "tm-vscode.helloWorld",
+					"group": "navigation"
+				},
+				{
+					"command": "tm-vscode.TRYTHIS",
+					"group": "navigation"
+				},
+				{
+					"command": "tm-vscode.compile",
+					"group": "navigation"
+				},
+				{
+					"command": "tm-vscode.output",
+					"group": "navigation"
+				},
+				{
+					"command": "tm-vscode.submit",
+					"group": "navigation"
+				},
+				{
+					"command": "tm-vscode.outputall",
+					"group": "navigation"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+        "@types/vscode": "^1.63.0",
+        "@types/glob": "^7.1.4",
+        "@types/mocha": "^9.0.0",
+        "@types/node": "14.x",
+        "eslint": "^8.1.0",
+        "glob": "^7.1.7",
+        "mocha": "^9.1.3",
+        "typescript": "^4.4.4",
+        "@vscode/test-electron": "^1.6.2"
+    }
+
+}
