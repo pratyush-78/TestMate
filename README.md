@@ -1,6 +1,7 @@
 # TestMate README
 
 <!-- This is the README for your extension "tm-vscode". After writing up a brief description, we recommend including the following sections. -->
+Copyright © 2021 pratyush-78
 
 This application is to assist a competitive-programmer in a CodeForces round.
 
