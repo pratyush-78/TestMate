@@ -44,9 +44,19 @@ then
 fi
 echo "permissions added."
 
+
+echo "installing tm-vscode from tm-vscode-0.0.1.vsix"
+echo "."
+echo "."
+code --install-extension tm-vscode-0.0.1.vsix;
+if [ $? -ne 0 ]
+then
+    echo "Aborting : error";
+    exit;
+fi
+
 sleep 2
 echo ".";
 echo ".";
 echo ".";
-
 echo "Open a new terminal and try the command 'cf'";
