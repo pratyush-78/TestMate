@@ -51,7 +51,7 @@ function activate(context) {
 
 		getRequirements();
 
-		exec(`gnome-terminal -- bash -c 'cd ${prblm_dir}; ./a.out < in0.txt > res.txt; cat res.txt; echo "\nexpected output...."; cat < out0.txt; read r' exec bash`, (error, stdout, stderr) => {
+		exec(`gnome-terminal -- bash -c 'cd ${prblm_dir}; ./a.out < in0.txt > res.txt;echo "Your output...."; cat res.txt; echo "\nexpected output...."; cat < out0.txt; read r' exec bash`, (error, stdout, stderr) => {
 			if (error) {
 				console.log(`error: ${error.message}`);
 				return;

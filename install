@@ -55,7 +55,6 @@ then
     exit;
 fi
 
-sleep 2
 echo ".";
 echo ".";
 echo ".";

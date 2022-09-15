@@ -9,23 +9,22 @@ typedef unsigned long long ull;
 #define pb push_back
 #define mp make_pair
 
-
-
-int solve() {
-
-
-}
+vector<ll>V;
+unordered_map<ll, ll> mp;
+set<ll> st;
+string s = "";
 
 int main() 
 {
+    ios_base::sync_with_stdio;
+    cin.tie(0); cout.tie(0);
     int t;
     cin>> t;
-    int ans[t];
 
-    for(int i=0; i<t; i++) 
+    while(t--)
     {
 
-        ans[i] = solve( );
+
     }
 
     return 0;
