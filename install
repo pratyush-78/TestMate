@@ -19,7 +19,7 @@ echo "copied."
 echo "Creating command 'cf' for quick access.....";
 echo ".";
 echo ".";
-if grep -q "alias cf='cd ~/TestMate/; ./cf.sh;';" ~/.bash_aliases
+if grep -q "alias cf='cd ~/TestMate/; ./cf.sh';" ~/.bash_aliases
 then
     echo "alias already present"
 else
