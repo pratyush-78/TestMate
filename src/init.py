@@ -56,8 +56,8 @@ def ParseQuestions(soup, base_addr):
 
         problem_num += 1
 
-    os.system(f"gnome-terminal -e 'code {base_addr}'")
-    os.system(f"gnome-terminal -e 'code {base_addr}/A/sol.cpp'")
+    os.system(f"gnome-terminal -- bash -c 'code {base_addr}'; exec bash")
+    os.system(f"gnome-terminal -- bash -c 'code {base_addr}/A/sol.cpp'; exec bash")
 
 
 
@@ -74,6 +74,7 @@ base_addr = os.path.expanduser("~/CF/"+cf)
 
 if os.path.exists(base_addr):
     print("already exixts")
+    os.system(f"gnome-terminal -- bash -c 'code {base_addr}'; exec bash")
     exit()
 else:
     ParseQuestions(soup, base_addr)
